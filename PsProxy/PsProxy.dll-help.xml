@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<helpItems xmlns="http://msh" schema="maml">
+
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+                   xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+                   xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+
+    <command:details>
+      <command:name>Get-Proxy</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>Proxy</command:noun>
+      <maml:description>
+        <maml:para>Retrieves the global HTTP proxy configuration.</maml:para>
+      </maml:description>
+    </command:details>
+
+    <maml:description>
+      <maml:para>The Get-Proxy cmdlet retrieves the global HTTP proxy configuration.</maml:para>
+    </maml:description>
+
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-Proxy</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+
+  </command:command>
+
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+                 xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+                 xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+
+    <command:details>
+      <command:name>Set-Proxy</command:name>
+      <command:verb>Set</command:verb>
+      <command:noun>Proxy</command:noun>
+      <maml:description>
+        <maml:para>Sets the global HTTP proxy configuration.</maml:para>
+      </maml:description>
+    </command:details>
+
+    <maml:description>
+      <maml:para>The Set-Proxy cmdlet sets the global HTTP proxy configuration.</maml:para>
+    </maml:description>
+
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Set-Proxy</maml:name>
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="1">
+          <maml:name>ProxyServer</maml:name>
+          <command:parameterValue required="true">
+            String
+          </command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="2">
+          <maml:name>ProxyOverride</maml:name>
+          <command:parameterValue required="true">
+            String[]
+          </command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Set-Proxy</maml:name>
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+          <maml:name>AutoConfigURL</maml:name>
+          <command:parameterValue required="true">
+            String
+          </command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Set-Proxy</maml:name>
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Direct</maml:name>
+          <command:parameterValue required="true">
+            SwitchParameter
+          </command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Set-Proxy</maml:name>
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+          <maml:name>AutoDetect</maml:name>
+          <command:parameterValue required="true">
+            SwitchParameter
+          </command:parameterValue>
+          <maml:description>
+            <maml:para>Don't use a proxy server for addresses beginning with.</maml:para>
+          </maml:description>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Set-Proxy</maml:name>
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+          <maml:name>InputObject</maml:name>
+          <command:parameterValue required="true">
+            PsProxy.InternetProxy
+          </command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+
+    <command:parameters>
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="1">
+        <maml:name>ProxyServer</maml:name>
+        <command:parameterValue required="true">
+          String
+        </command:parameterValue>
+        <maml:description>
+          <maml:para>Proxy address to use.</maml:para>
+        </maml:description>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="2">
+        <maml:name>ProxyOverride</maml:name>
+        <command:parameterValue required="true">
+          String[]
+        </command:parameterValue>
+        <maml:description>
+          <maml:para>Bypass proxy server for addresses beginning with.</maml:para>
+        </maml:description>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+        <maml:name>AutoConfigURL</maml:name>
+        <command:parameterValue required="true">
+          String
+        </command:parameterValue>
+        <maml:description>
+          <maml:para>Use automatic proxy configuration script</maml:para>
+        </maml:description>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Direct</maml:name>
+        <command:parameterValue required="true">
+          SwitchParameter
+        </command:parameterValue>
+        <maml:description>
+          <maml:para>Don't use a proxy server</maml:para>
+        </maml:description>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+        <maml:name>AutoDetect</maml:name>
+        <command:parameterValue required="true">
+          SwitchParameter
+        </command:parameterValue>
+        <maml:description>
+          <maml:para>Automatically detect settings</maml:para>
+        </maml:description>
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+          <maml:name>InputObject</maml:name>
+          <command:parameterValue required="true">
+            PsProxy.InternetProxy
+          </command:parameterValue>
+          <maml:description>
+            <maml:para>Don't use a proxy server for addresses beginning with.</maml:para>
+          </maml:description>
+        </command:parameter>
+      </command:parameter>
+    </command:parameters>
+
+  </command:command>
+
+</helpItems>

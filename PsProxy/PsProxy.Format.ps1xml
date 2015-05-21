@@ -1,0 +1,98 @@
+﻿<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>PsProxy.InternetProxy</Name>
+      <ViewSelectedBy>
+        <TypeName>PsProxy.InternetProxy</TypeName>
+      </ViewSelectedBy>
+
+      <!--
+      <CustomControl>
+        <CustomEntries>
+          <CustomEntry>
+            <EntrySelectedBy>
+              <SelectionCondition>
+                <TypeName>PsProxy.InternetProxy</TypeName>
+                <ScriptBlock><![CDATA[$_.Type -eq "AUTO_DETECT"]]></ScriptBlock>
+              </SelectionCondition>
+            </EntrySelectedBy>
+            <CustomItem>
+              <Frame>
+                <LeftIndent>4</LeftIndent>
+                <CustomItem>
+                  <Text>Automaticall detect settings</Text>
+                  <NewLine/>
+                </CustomItem>
+              </Frame>
+            </CustomItem>
+          </CustomEntry>
+
+          <CustomEntry>
+            <EntrySelectedBy>
+              <SelectionCondition>
+                <TypeName>PsProxy.InternetProxy</TypeName>
+                <ScriptBlock><![CDATA[$_.Type -eq "PROXY"]]></ScriptBlock>
+              </SelectionCondition>
+            </EntrySelectedBy>
+            <CustomItem>
+              <Frame>
+                <LeftIndent>4</LeftIndent>
+                <CustomItem>
+                  <Text>Use proxy server</Text>
+                  <NewLine/>
+                </CustomItem>
+              </Frame>
+            </CustomItem>
+          </CustomEntry>
+
+          <CustomEntry>
+            <CustomItem>
+              <Frame>
+                <LeftIndent>4</LeftIndent>
+                <CustomItem>
+                  <Text>Unknown proxy configurat</Text>
+                  <NewLine/>
+                </CustomItem>
+              </Frame>
+            </CustomItem>
+          </CustomEntry>
+          
+        </CustomEntries>
+      </CustomControl>-->
+
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <Label>Type:</Label>
+                <PropertyName>Type</PropertyName>
+              </ListItem>
+              <ListItem>
+                <ItemSelectionCondition>
+                  <ScriptBlock><![CDATA[$_.Type -eq "AUTO_PROXY_URL"]]></ScriptBlock>
+                </ItemSelectionCondition>
+                <Label>Automatic configuration script</Label>
+                <PropertyName>AutoConfigURL</PropertyName>
+              </ListItem>
+              <ListItem>
+                <ItemSelectionCondition>
+                  <ScriptBlock><![CDATA[$_.Type -eq "PROXY"]]></ScriptBlock>
+                </ItemSelectionCondition>
+                <Label>Proxy server</Label>
+                <PropertyName>ProxyServer</PropertyName>
+              </ListItem>
+              <ListItem>
+                <ItemSelectionCondition>
+                  <ScriptBlock><![CDATA[$_.Type -eq "PROXY"]]></ScriptBlock>
+                </ItemSelectionCondition>
+                <Label>Bypass for</Label>
+                <PropertyName>ProxyOverride</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
